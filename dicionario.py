@@ -48,6 +48,10 @@ for key in favorite_languages.keys(): # Código mais fácil de ler
 #for key in favorite_languages: # Mesma coisa do For acima
 #    print(key)
 
+# Percorrendo um dicionário retornando apenas os values
+for value in favorite_languages.values():
+    print(value)
+
 # Comparando uma lista com um dicionário; Caso encontrei a key na lista de amigos eu printo
 friends = ['alan', 'edward']
 for name in favorite_languages.keys():
@@ -55,3 +59,8 @@ for name in favorite_languages.keys():
         print("Olá " + name + ", sua linguagem favorita é: " + favorite_languages[name].title() + "!")
 
 print(favorite_languages.keys())
+
+# Uso da função set para retornar itens únicos e uso do método values para retornar apenas os valores do dicionário.
+print("Uso da função set abaixo")
+for language in set(favorite_languages.values()): 
+    print(language.title())
