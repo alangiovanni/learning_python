@@ -29,8 +29,49 @@ print("\nGlossário")
 for palavra in glossario:
     print(palavra + ": " + str(glossario[palavra]) + "\n")
 
-# Outro For, aparentemente mais adequado
+# 6.4 - Glossário 2
+# Adicionando novos termos ao glossário (dicionário)
+glossario['list']='Lista é uma cadeira de informações acessadas por índices'
+glossario['list comprehesions']='É uma forma de resumir ainda mais o código em Python, é possível criar um for e armazenar o resultado em uma variável utilizando apenas uma linha'
+
+# Outro For mais adequado - Deve mostrar os novos termos adicionados
 print("\nGlossário")
 for key, value in glossario.items():
     print(key)
     print("\t" + value)
+
+# 6.5 - Rios
+rios = {
+    'nilo': 'egito',
+    'amazonas': 'brasil',
+    'são francisco': 'brasil',
+}
+
+for rio, pais in rios.items():
+    message="O rio " + str(rio).title() + " corre pelo " + str(pais).title() + "."
+    print(message)
+
+for rio in rios.keys():
+    message="Rio: " + str(rio).title()
+    print(message)
+
+for pais in set(rios.values()):
+    message="País: " + str(pais).title()
+    print(message)
+
+# 6.6 - Enquete
+favorite_languages = {
+    'alan': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phill': 'python', # Colocar vírgula sempre no fim de cada linha, mesmo quando estiver terminado, é uma boa prática.
+}
+
+list_pessoas = ['alan', 'antony', 'thalita', 'edward']
+
+for pessoa in list_pessoas:
+    if pessoa in favorite_languages.keys():
+        message="Obrigado por responder, " + pessoa
+    else:
+        message="Olá " + pessoa + ", vamos responder seu questionário agora?"
+    print(message)
