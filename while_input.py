@@ -40,8 +40,8 @@
 #    current_number += 1
 
 # Repete tudo que o usuário digitar até que ele digite quit
-message = ""
-prompt = "Tell me something, and I will repeat it back to you: "
+#message = ""
+#prompt = "Tell me something, and i will repeat it back to you: "
 #while message != 'quit':
 #    message = input(prompt)
 #    if message == 'quit':
@@ -50,11 +50,27 @@ prompt = "Tell me something, and I will repeat it back to you: "
 #        print(message)
 
 # Mesmo While do anterior, porém mais elegante com uso de FLAG
-active = True
-while active:
-    message = input(prompt)
-    if message == 'quit':
-        print("OK! See you.")
-        active = False
-    else:
-        print(message)
+#message = ""
+#prompt = "Tell me something, and i will repeat it back to you: "
+#active = True
+#while active:
+#    message = input(prompt)
+#    if message == 'quit':
+#        print("OK! See you.")
+        # Sai do laço
+#        active = False
+        # Também sai do laço e anula a necessidade de usar uma flag;
+        # break
+#    else:
+#        print(message)
+
+# Uso do continue em um laço
+# Print apenas números impares de um intervalo de números
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if current_number % 2 == 0:
+        # Número é par, prossiga ao próximo loop;
+        continue
+    # Printa o número
+    print(current_number)
