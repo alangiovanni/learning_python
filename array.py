@@ -10,7 +10,7 @@ print(nomes[3])
 # Editar a posição 3 do array
 nomes[3] = 'Cayo'
 
-# Inserção de um novo elemento
+# Inserção de um novo elemento no FINAL da lista
 nomes.append('Marx')
 print(nomes)
 
@@ -26,7 +26,7 @@ sobrenomes.append('Wendell')
 print(nomes)
 print(sobrenomes)
 
-# Inserção de um novo item no início da lista
+# Inserção de um novo item no INÍCIO da lista
 nomes.insert(0, 'Alan')
 sobrenomes.insert(0, 'Giovanni')
 

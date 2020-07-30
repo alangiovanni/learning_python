@@ -19,29 +19,25 @@
 #print(message)
 
 # 7.4 - Ingredientes para uma pizza
-all_ingredientes = ['tomate', 'queijo mussarela', '4 queijos', 'presunto', 'azeitona', 'bacon', 'milho', 'ervilha', 'catupiry', 'camarao']
-my_ingredientes = []
+# Para este exercício fiz um outro .py nomeado como software_pedido_pizza.py
 
-while True:
-    print("\nIngredientes Disponíveis para sua pizza!")
-    count=0
-    for ingrediente in all_ingredientes:
-        message=str(count) + " - " + ingrediente
-        print(message.title())
-        count += 1
+# 7.5 - Ingressos para o cinema
+active = True
+while active:
+    age = input("Quantos anos você tem? ")
     
-    print("\n" + 'Você pode finalizar o pedido digitando "quit" a qualquer momento!')
-    print("Ingredientes selecionados até o momento: " + str(my_ingredientes))
-    ingrediente_choise = input("\nPor favor digite o número referente ao ingrediente que deseja: ")
-    if ingrediente_choise == 'quit':
-        print("\nPedido realizado com sucesso! Abaixo segue os ingredientes da sua pizza: ")
-        for ingrediente in my_ingredientes:
-            print("-> " + ingrediente)
+    # Se o usuário digitar QUIT eu saio do laço
+    if age == 'quit':
         break
     
-    # Se chegou aqui o teste deu falso então o usuário não informou quit e sim um ingrediente. Converte em número a escolha
-    ingrediente_choise = int(ingrediente_choise)
-    # Coloca no fim da lista o ingrediente selecionado
-    my_ingredientes.append(all_ingredientes[ingrediente_choise])
-    # Retira o Ingrediente da lista de disponíveis
-    all_ingredientes.remove(all_ingredientes[ingrediente_choise])
+    # Converto a resposta em INT.
+    age = int(age)
+
+    if age < 3:
+        message = "Ingresso Gratuíto"
+    elif age < 12:
+        message = "Ingresso custa R$ 10,00"
+    else:
+        message = "Ingresso custa R$ 15,00"
+    
+    print(message)
