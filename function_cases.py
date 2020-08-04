@@ -17,6 +17,7 @@ make_shirt_default('M')
 
 # Criando Trigger Zabbix
 def create_trigger(name_trigger, formula, key, delay='30s', unit='', description=''):
+    """Cria uma requisição para a API zabbix create.trigger"""
     trigger = {'name': name_trigger, 'form': formula, 'key': key, 'delay': delay}
     if unit:
         trigger['unit'] = unit
