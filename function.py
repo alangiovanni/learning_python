@@ -18,9 +18,24 @@ def format_name(first_name, last_name, middle_name=''):
     
     return full_name.title()
 
+# Return um dicionário
+def build_person(first_name, last_name, age=''):
+    """Devolve um dicionário com informações sobre uma pessoa"""
+    person = {'first': first_name, 'last': last_name}
+    
+    # Se for passado a idade
+    if age:
+        person['age'] = age
+    
+    return person
+
 # Chamadas das funções acima
 greet_user('jesse') # Chamada da função com passagem de argumento
 describe_pet('dog', 'penny') # Vários argumentos
 describe_pet(pet_name='jurema', animal_type='cat') # Argumentos NOMEADOS, posso alterar a ordem
 print("Meu nome: " + format_name('alan', 'targino')) # Uso do return
 print("Meu nome: " + format_name('alan', 'targino', 'giovanni')) # Uso do return, o Giovanni é um termo opcional;
+
+# Dicionário
+pessoa=build_person('Alan', 'Targino')
+print(pessoa)
