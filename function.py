@@ -29,6 +29,33 @@ def build_person(first_name, last_name, age=''):
     
     return person
 
+# Aceitando vários argumentos sem saber ao certo a quantidade
+# um único asterisco no paramêtro faz Python criar uma tupla vazia e coloca todos os argumentos recebidos.
+def make_pizza(*toppings):
+    """Exibe uma lista de ingredientes pedidos na pizza"""
+    # print(toppings) #aqui mostra o formato da Tupla
+    print("\nFazendo uma pizza com os seguintes ingredientes: ")
+    for topping in toppings:
+        print(topping)
+
+def make_pizza_combo(qtde_pizza, size, *toppings):
+    """Exibe uma lista de ingredientes pedidos na pizza, a quantidade e o tamanho"""
+    print('\nFoi escolhido ' + str(qtde_pizza) + ' pizzas de tamanho ' + size + '.')
+    print("Segue os ingredientes: ")
+    for topping in toppings:
+        print(topping)
+
+# asterisco duplo cria um dicionário vazio e coloca todos os argumentos que será recebido ali
+def build_profile(first_name, last_name, **user_info):
+    """Constrói um dicionário contendo tudo que se sabe sobre um usuário"""
+    print('\nBuildando um perfil de usuário')
+    profile = {}
+    profile['first_name'] = first_name
+    profile['last_name'] = last_name
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
 # Chamadas das funções acima
 greet_user('jesse') # Chamada da função com passagem de argumento
 describe_pet('dog', 'penny') # Vários argumentos
@@ -39,3 +66,15 @@ print("Meu nome: " + format_name('alan', 'targino', 'giovanni')) # Uso do return
 # Dicionário
 pessoa=build_person('Alan', 'Targino')
 print(pessoa)
+
+# Quando a função não tem a quantidade de paramêtros definido
+make_pizza('Cream Cheese')
+make_pizza('peperoni', 'cheddar', 'bacon')
+make_pizza_combo(2, 'Grande', 'peperoni', 'cheddar', 'bacon')
+
+# Criando um dicionário com várias informações de um usuário
+user_profile = build_profile('albert', 'einstein', location='princeton', field='physics')
+print(user_profile)
+
+user_profile = build_profile('alan', 'targino', location='paraiba', field='ti', company='conductor')
+print(user_profile)

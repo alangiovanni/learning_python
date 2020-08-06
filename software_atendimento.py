@@ -1,17 +1,6 @@
 # Bibliotecas
 import os
 
-def get_infor_atendentes(atendentes):
-    """Insere vários atendentes de uma vez"""
-    qtde_atendentes = input("Favor informe a quantidade de atendentes em seu estabelecimento: ")
-    # Converte em int
-    qtde_atendentes = int(qtde_atendentes)
-    for id in range(1, qtde_atendentes+1):
-        first_name = input("\nFavor informar o primeiro nome do " + str(id) + "º atendente: ")
-        #atendente = {'id': id, 'nome': first_name, 'disponibilidade': 'livre', 'em_atendimento': ''}
-        #atendentes.append(atendente)
-        add_atendente(first_name, atendentes)
-
 def add_atendente(nome, atendentes):
     # Dicionário
     novo_atendente = {}
@@ -125,7 +114,12 @@ def inserir_atendente(atendentes):
         add_atendente(nome_empregado, atendentes)
     else:
         print("Não há caixa disponível para atendimento, vamos adicionar varios caixas de uma vez? ")
-        get_infor_atendentes(atendentes)
+        qtde_atendentes = input("Favor informe a quantidade de atendentes em seu estabelecimento: ")
+        # Converte em int
+        qtde_atendentes = int(qtde_atendentes)
+        for id in range(1, qtde_atendentes+1):
+            first_name = input("\nFavor informar o primeiro nome do " + str(id) + "º atendente: ")
+            add_atendente(first_name, atendentes)
 
 def main():
     """Função Principal do Programa"""
