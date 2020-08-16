@@ -30,4 +30,31 @@ def create_trigger(name_trigger, formula, key, delay='30s', unit='', description
 retorno_trigger = create_trigger('Indisponibilidade VPN', 'item.last()=1', 'key-qualquer', description='Trigger de indisponibilidade da VPN')
 print(retorno_trigger)
 
+# 8.12 - Sanduiches
+def make_sanduiche(*toppings):
+    """Faz um sanduiche"""
+    print("\nO seu sanduiche possui os seguintes ingredientes: ")
+    for topping in toppings:
+        print(topping)
+
+# Criando sanduiches
+make_sanduiche('queijo', 'presunto')
+make_sanduiche('queijo', 'presunto', 'bacon')
+make_sanduiche('queijo', 'presunto', 'bacon', 'ovos')
+
+# 8.13 - Perfil do Usuário
+def build_profile(first_name, last_name, **user_info):
+    """Constrói um dicionário contendo tudo que se sabe sobre um usuário"""
+    print('\nBuildando um perfil de usuário')
+    profile = {}
+    profile['first_name'] = first_name.title()
+    profile['last_name'] = last_name.title()
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+# Chamada da função para criar um perfil de usuário
+user_profile = build_profile('alan', 'targino', location='brazil', field='IT', company='Conductor')
+print(user_profile)
+
 
