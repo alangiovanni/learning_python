@@ -6,7 +6,8 @@ new_restaurant = Restaurant('dogão063', 'brasileira')
 
 # 9.13 - Rescrevendo o programa com OrderedDict
 from collections import OrderedDict
-favorite_languages = OrderedDict()
+favorite_languages = OrderedDict() # Dessa forma instancio um dicionário mantendo o controle da ordem de inserção
+# favorite_languages = {} # Instanciando um dicionário sem controle de ordem de inserção.
 # Linguages favoritas - Dicionário
 favorite_languages['jen'] = 'python'
 favorite_languages['sarah'] = 'c'

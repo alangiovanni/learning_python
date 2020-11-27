@@ -1,0 +1,5 @@
+Essa pasta "python_work" o python entende que é um local destinado a arquivos em que será trabalhado no código.
+Portanto é possível passar caminhos absolutos omitindo esta pasta desde que ela seja a raiz, ou seja, esta pasta
+deve estar no mesmo nível do código em python principal.
+
+Obs: Acredito que a pasta principal onde essa pasta deveria estar era dentro de learning_python. Falta testar.

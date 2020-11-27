@@ -1,0 +1,5 @@
+Iniciando o arquivo em modo escritaWrite sem quebra de linha!
+Write com quebra de linha no inicio e final!
+
+Iniciando o arquivo em modo append
+Write com quebra de linha no inicio e final!

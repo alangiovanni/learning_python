@@ -1,0 +1,3 @@
+Em Python podemos criar dicionarios;
+Em Python podemos criar um array de numeros aleatorios em uma unica linha;
+Em Python podemos analisar arquivos gigantescos sem perdar desempenho;

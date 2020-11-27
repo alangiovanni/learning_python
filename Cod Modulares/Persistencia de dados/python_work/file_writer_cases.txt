@@ -1,0 +1,7 @@
+Alan
+
+Lista de Convidados:
+
+Enquete sobre Programacao:
+{'nome': 'Alan', 'linguagem': 'Python', 'motivo': 'Linguagem facil e poderosa'}
+{'nome': 'Kaio', 'linguagem': 'Shell', 'motivo': 'Nao Sei'}
